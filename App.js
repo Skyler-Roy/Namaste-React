@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
 const element = React.createElement(
   "h1",
   {
@@ -37,7 +39,7 @@ create a html structure as given below using react
 
 const parent = React.createElement("div", { id: "parent" }, [
   React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "This is a h1 heading."),
+    React.createElement("h1", {}, "This is a Namaste React. 🚀"),
     React.createElement("h2", {}, "This is a h2 heading."),
   ]),
   React.createElement("div", { id: "child2" }, [
@@ -60,54 +62,3 @@ console.log(parent);
 // react only takes control of the root element and not the whole app. React only works inside the root element. Anything inside the root element is replaced with code rendered using react code. Anything written outside the root element will remain unchanged.
 
 // Libraries can work independently on small portions of your app as well while a framework comes with a load of things. React can work even on an existing app.
-
-/*
-Difference Between Development and Production CDN Links
-
-react.development.js / react-dom.development.js:
-
-* Intended for development and testing.
-
-*Larger file size (not minified).
-
-*Includes ✅ developer warnings and helpful error messages.
-
-*✅ Provides full debugging support (stack traces, messages).
-
-*❌ Slower performance due to extra debug code.
-
-*❌ Not minified.
-
-react.production.min.js / react-dom.production.min.js:
-
-*Intended for live/production environments.
-
-*Smaller file size (minified and optimized).
-
-*❌ Does not include warnings or debug info.
-
-*❌ No debugging support (clean, silent errors).
-
-*✅ Faster performance for end users.
-
-*✅ Minified for efficient loading.
-
-Let me know if you'd like this in a downloadable format (PDF, Markdown, etc.)!
-
-Q. What is JSX?
-Ans : JSX stands for JavaScript XML. It is a syntax extension for JavaScript that looks similar to HTML or XML. JSX allows you to write HTML-like code within your JavaScript code, making it easier to create and visualize the structure of your user interface components in React.
-
-Q. Why do we need to use JSX?
-Ans : JSX makes it easier to write and understand the structure of your UI components. It allows you to describe what the UI should look like in a more intuitive way, similar to writing HTML. JSX also enables you to embed JavaScript expressions within the markup, making it powerful for dynamic content rendering.
-
-Q. Can we use React without JSX?
-Ans : Yes, you can use React without JSX. React provides a way to create elements using the React.createElement() method, which allows you to create React elements programmatically. However, using JSX is more common and recommended as it provides a more concise and readable syntax for defining UI components.
-
-Q. How does JSX get converted to JavaScript?
-Ans : JSX is not valid JavaScript, so it needs to be transformed into regular JavaScript code that browsers can understand. This transformation is typically done using a tool called Babel. Babel takes the JSX code and converts it into calls to React.createElement() method, which creates the corresponding React elements.
-
-Q. What is Babel?
-Ans : Babel is a popular JavaScript compiler that is often used in React projects to transform JSX code into standard JavaScript code that browsers can understand. Babel takes the JSX syntax and converts it into calls to React.createElement() method, allowing you to write JSX while still being able to run your code in environments that do not natively support JSX.
-
-
-*/

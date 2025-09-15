@@ -4,24 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="App.js" defer></script> 
+    <script type = "module" src="App.js" defer></script> 
     <!-- Here the order of scripts is important 
      first the react scripts should come and then the app scripts should come.
      Here these scripts work because we have used defer keyword here which executes the scripts after the execution of HTML and scripts written without defer will be executed immediately. -->
-    <script src="script.js" defer></script>
-    <!-- Load React and ReactDOM from CDN(content delivery network) -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-    <!-- The above two links contains the React and ReactDOM libraries these are used to build user interfaces, these files contains the necessary code to enable React functionality in the application. The first file is the core React library and the second file is the ReactDOM library which is used to interact with the DOM. -->
-
-    <!-- Whenever we serve a file from a cdn link we should set the crossorigin attribute to avoid CORS issues (Cross origin resource sharing) and we should also verify that the cdn we are using sets the
-    "Access-Control-Allow-Origin : *" HTTP header this enables the browser to make cross-origin requests to the CDN and allows better error handling experience.-->
+    <script type = "module" src="script.js" defer></script>    
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -30,14 +17,3 @@
     </div>
   </body>
 </html>
-<!-- 
-Q.What is crossorigin?
-Ans: The crossorigin attribute is used in HTML to specify how the browser should handle cross-origin requests for certain resources, such as scripts, images, or stylesheets. It is particularly important when loading resources from a different domain than the one serving the web page.
-
-When you include the crossorigin attribute in a script or link tag, it indicates that the resource being loaded may be subject to CORS (Cross-Origin Resource Sharing) policies. CORS is a security feature implemented by web browsers to restrict web pages from making requests to a different domain than the one that served the original web page.
-
-Q.What are cdn links?
-Ans: CDN links are URLs that point to resources hosted on a Content Delivery Network (CDN). A CDN is a network of servers distributed across various locations to deliver content (such as scripts, stylesheets, images, etc.) more efficiently to users based on their geographic location. By using CDN links, developers can leverage the speed and reliability of the CDN to serve static assets, reducing latency and improving load times for their web applications.
-
-Q.Why do we need two different scripts for React and ReactDOM why can't we do all this in one single library?
-Ans: React is a JavaScript library for building user interfaces, while ReactDOM is a separate library that provides DOM-specific methods for rendering React components to the DOM. The separation of these two libraries allows for better modularity and flexibility in how React can be used across different platforms, such as web browsers and mobile applications. By keeping React and ReactDOM separate, developers can choose to use React with other rendering targets, such as React Native for mobile app development, without being tied to the DOM-specific functionality provided by ReactDOM.
