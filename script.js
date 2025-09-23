@@ -1,6 +1,6 @@
 const div = document.getElementById("container");
 const h1 = document.createElement("h1");
-h1.innerText = "Hello Abhishek";
+h1.innerText = "Hello Abhishek nothing is rendered!😞";
 const tnode = document.createTextNode("Lakshya");
 div.appendChild(h1);
 div.appendChild(tnode);
